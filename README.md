@@ -129,7 +129,7 @@ $ cd snyk-boot-web
 * To have better control over your tests, you can pass the severity-threshold flag to the snyk test command with one of the supported options (low|medium|high|critical). With this flag, only vulnerabilities of provided level or higher will be reported. Let's set that to "**critical**" and run a test as shown below.
 
 ```bash
-snyk test --severity-threshold=high
+$ snyk test --severity-threshold=high
 
 Testing /Users/pasapicella/snyk/SE/workshops/NEW-WORKSHOPS/snyk-boot-web...
 
@@ -181,7 +181,23 @@ Project path:      /Users/pasapicella/snyk/SE/workshops/NEW-WORKSHOPS/snyk-boot-
 Licenses:          enabled
 ```
 
-TODO://
+* We can instruct the Snyk App to actually monitor our code in the UI as shown below, so run "**snyk monitor**" to achieve that. 
+
+_Note: You may not need to set the paramater --org if you only have the one org in your account._ 
+
+```bash
+snyk monitor --org=workshops-admin-org
+
+Monitoring /Users/pasapicella/snyk/SE/workshops/NEW-WORKSHOPS/snyk-boot-web (com.example:snyk-boot-web)...
+
+Explore this snapshot at https://app.snyk.io/org/workshops-admin-org/project/c6fa0f1e-acf7-4e89-9957-ef8f227c6e09/history/79490f97-c20f-4931-b7ac-a60db1a9c847
+
+Notifications about newly disclosed issues related to these dependencies will be emailed to you.
+```
+
+* Returning to the Snyk App UI will show our CLI "**snyk monitor**" result but this time we didn't use the GitHub integration instead the scan type is given as a CLI scan as we performed this from the CLI itself
+
+![alt tag](https://i.ibb.co/3r8WpKq/app-sec-snyk-workshop-4.png)
 
 ## Step 7 - Perform a Snyk Test Using Snyk Code
 
@@ -189,13 +205,11 @@ TODO://
 
 ## Step 8 - Using Snyk VS Code IDE Plugin
 
-Optionally if you have time, and you have VS Code installed you can install a plugin to allow you to scan your "**goof**" code within VS code while in an IDE
+Optionally if you have time, and you have VS Code installed you can install a plugin to allow you to scan your "**snyk-boot-web**" code within VS code while in an IDE
 
 * Install it using the following link - [Install VS Code Snyk Plugin](https://marketplace.visualstudio.com/items?itemName=snyk-security.vscode-vuln-cost)
 
-![alt tag](https://i.ibb.co/zHZ3qxv/snyk-starter-open-source-12.png)
-
-
+![alt tag](https://i.ibb.co/3r8WpKq/app-sec-snyk-workshop-4.png)
 
 Thanks for attending and completing this workshop
 
