@@ -78,6 +78,17 @@ TODO://
 
 In addition to the Snyk App UI we also have, snyk - CLI and build-time tool to find & fix known vulnerabilities in open-source dependencies. The CLI is what is used in DevOps pipelines to introduce Application Security Scans as part of that workflow to push applications into production.
 
+Install the relevant package manager before you use the Snyk CLI tool. In this case you will need maven installed to perform these steps
+
+```bash
+mvn --version
+Apache Maven 3.8.4 (9b656c72d54e5bacbed989b64718c159fe39b537)
+Maven home: /opt/homebrew/Cellar/maven/3.8.4/libexec
+Java version: 11.0.13, vendor: Oracle Corporation, runtime: /Library/Java/JavaVirtualMachines/jdk-11.0.13.jdk/Contents/Home
+Default locale: en_AU, platform encoding: UTF-8
+OS name: "mac os x", version: "11.3", arch: "x86_64", family: "mac"
+```
+
 * Before we get started please make sure you have setup the Snyk CLI. There are various install options as per the links below. Using the prebuilt binaries means you don't have to install NPM to install the Snyk CLI.
 
 1. Install Page - https://support.snyk.io/hc/en-us/articles/360003812538-Install-the-Snyk-CLI
@@ -201,7 +212,29 @@ Notifications about newly disclosed issues related to these dependencies will be
 
 ## Step 7 - Perform a Snyk Test Using Snyk Code
 
-TODO://
+To perform a Snyk Code test using the SNYK CLI we simply run "snyk code test" from the same directory we are in based on the last step which is the root folder of our cloned repo
+
+```bash
+snyk code test
+
+Testing /Users/pasapicella/snyk/SE/workshops/NEW-WORKSHOPS/snyk-boot-web ...
+
+ ✗ [High] SQL Injection
+   Path: src/main/java/com/example/snykbootweb/jdbc/CustomerRest.java, line 29
+   Info: Unsanitized input from the request URL flows into query, where it is used in an SQL query. This may result in an SQL Injection vulnerability.
+
+
+✔ Test completed
+
+Organization:      pas.apicella-41p
+Test type:         Static code analysis
+Project path:      /Users/pasapicella/snyk/SE/workshops/NEW-WORKSHOPS/snyk-boot-web
+
+Summary:
+
+  1 Code issues found
+  1 [High]
+```
 
 ## Step 8 - Using Snyk VS Code IDE Plugin
 
@@ -209,7 +242,7 @@ Optionally if you have time, and you have VS Code installed you can install a pl
 
 * Install it using the following link - [Install VS Code Snyk Plugin](https://marketplace.visualstudio.com/items?itemName=snyk-security.vscode-vuln-cost)
 
-![alt tag](https://i.ibb.co/3r8WpKq/app-sec-snyk-workshop-4.png)
+![alt tag](https://i.ibb.co/zmFGMMg/app-sec-snyk-workshop-5.png)
 
 Thanks for attending and completing this workshop
 
