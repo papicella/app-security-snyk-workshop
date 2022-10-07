@@ -106,8 +106,82 @@ Your account has been authenticated. Snyk is now ready to be used.
 ```
 
 _Note: If you are having trouble authenticating via a browser with the Snyk App you can setup authentication using the API token as shown below
-[Authenticate using your API token](https://support.snyk.io/hc/en-us/articles/360004008258-Authenticate-the-CLI-with-your-account#UUID-4f46843c-174d-f448-cadf-893cfd7dd858_section-idm4557419555668831541902780562)_
+[Authenticate using your API token](https://docs.snyk.io/snyk-cli/authenticate-the-cli-with-your-account)_
 
+* Clone your forked repository as shown below. You would use your own GitHub repo here instead of the one shown below
+
+```bash
+$ git clone https://github.com/papicella/snyk-boot-web
+Cloning into 'snyk-boot-web'...
+remote: Enumerating objects: 145, done.
+remote: Counting objects: 100% (145/145), done.
+remote: Compressing objects: 100% (103/103), done.
+remote: Total 145 (delta 60), reused 91 (delta 22), pack-reused 0
+Receiving objects: 100% (145/145), 74.51 KiB | 2.76 MiB/s, done.
+Resolving deltas: 100% (60/60), done.
+```
+
+* Change to the "snyk-boot-web" directory
+
+```bash
+$ cd snyk-boot-web
+```
+* To have better control over your tests, you can pass the severity-threshold flag to the snyk test command with one of the supported options (low|medium|high|critical). With this flag, only vulnerabilities of provided level or higher will be reported. Let's set that to "**critical**" and run a test as shown below.
+
+```bash
+snyk test --severity-threshold=high
+
+Testing /Users/pasapicella/snyk/SE/workshops/NEW-WORKSHOPS/snyk-boot-web...
+
+Tested 40 dependencies for known issues, found 11 issues, 11 vulnerable paths.
+
+Issues to fix by upgrading:
+
+  Upgrade com.h2database:h2@1.4.200 to com.h2database:h2@2.1.210 to fix
+  ✗ Remote Code Execution (RCE) [High Severity][https://security.snyk.io/vuln/SNYK-JAVA-COMH2DATABASE-2331071] in com.h2database:h2@1.4.200
+    introduced by com.h2database:h2@1.4.200
+  ✗ XML External Entity (XXE) Injection [High Severity][https://security.snyk.io/vuln/SNYK-JAVA-COMH2DATABASE-1769238] in com.h2database:h2@1.4.200
+    introduced by com.h2database:h2@1.4.200
+  ✗ Remote Code Execution (RCE) [Critical Severity][https://security.snyk.io/vuln/SNYK-JAVA-COMH2DATABASE-2348247] in com.h2database:h2@1.4.200
+    introduced by com.h2database:h2@1.4.200
+
+  Upgrade org.apache.logging.log4j:log4j-core@2.15.0 to org.apache.logging.log4j:log4j-core@2.17.0 to fix
+  ✗ Denial of Service (DoS) [High Severity][https://security.snyk.io/vuln/SNYK-JAVA-ORGAPACHELOGGINGLOG4J-2321524] in org.apache.logging.log4j:log4j-core@2.15.0
+    introduced by org.apache.logging.log4j:log4j-core@2.15.0
+  ✗ Remote Code Execution (RCE) [Critical Severity][https://security.snyk.io/vuln/SNYK-JAVA-ORGAPACHELOGGINGLOG4J-2320014] in org.apache.logging.log4j:log4j-core@2.15.0
+    introduced by org.apache.logging.log4j:log4j-core@2.15.0
+
+  Upgrade org.springframework.boot:spring-boot-starter-web@2.3.10.RELEASE to org.springframework.boot:spring-boot-starter-web@2.5.12 to fix
+  ✗ Denial of Service (DoS) [High Severity][https://security.snyk.io/vuln/SNYK-JAVA-COMFASTERXMLJACKSONCORE-2421244] in com.fasterxml.jackson.core:jackson-databind@2.11.4
+    introduced by org.springframework.boot:spring-boot-starter-web@2.3.10.RELEASE > org.springframework.boot:spring-boot-starter-json@2.3.10.RELEASE > com.fasterxml.jackson.core:jackson-databind@2.11.4
+  ✗ Privilege Escalation [High Severity][https://security.snyk.io/vuln/SNYK-JAVA-ORGAPACHETOMCATEMBED-2414084] in org.apache.tomcat.embed:tomcat-embed-core@9.0.45
+    introduced by org.springframework.boot:spring-boot-starter-web@2.3.10.RELEASE > org.springframework.boot:spring-boot-starter-tomcat@2.3.10.RELEASE > org.apache.tomcat.embed:tomcat-embed-core@9.0.45
+  ✗ Improper Input Validation [High Severity][https://security.snyk.io/vuln/SNYK-JAVA-ORGGLASSFISH-1297098] in org.glassfish:jakarta.el@3.0.3
+    introduced by org.springframework.boot:spring-boot-starter-web@2.3.10.RELEASE > org.springframework.boot:spring-boot-starter-tomcat@2.3.10.RELEASE > org.glassfish:jakarta.el@3.0.3
+  ✗ Remote Code Execution [Critical Severity][https://security.snyk.io/vuln/SNYK-JAVA-ORGSPRINGFRAMEWORK-2436751] in org.springframework:spring-beans@5.2.14.RELEASE
+    introduced by org.springframework.boot:spring-boot-starter-web@2.3.10.RELEASE > org.springframework:spring-web@5.2.14.RELEASE > org.springframework:spring-beans@5.2.14.RELEASE
+
+
+Issues with no direct upgrade or patch:
+  ✗ Remote Code Execution (RCE) [High Severity][https://security.snyk.io/vuln/SNYK-JAVA-COMH2DATABASE-31685] in com.h2database:h2@1.4.200
+    introduced by com.h2database:h2@1.4.200
+  No upgrade or patch available
+  ✗ Denial of Service (DoS) [High Severity][https://security.snyk.io/vuln/SNYK-JAVA-ORGYAML-2806360] in org.yaml:snakeyaml@1.26
+    introduced by org.springframework.boot:spring-boot-starter-web@2.3.10.RELEASE > org.springframework.boot:spring-boot-starter@2.3.10.RELEASE > org.yaml:snakeyaml@1.26
+  This issue was fixed in versions: 1.31
+
+
+
+Organization:      pas.apicella-41p
+Package manager:   maven
+Target file:       pom.xml
+Project name:      com.example:snyk-boot-web
+Open source:       no
+Project path:      /Users/pasapicella/snyk/SE/workshops/NEW-WORKSHOPS/snyk-boot-web
+Licenses:          enabled
+```
+
+TODO://
 
 ## Step 7 - Perform a Snyk Test Using Snyk Code
 
@@ -115,7 +189,11 @@ TODO://
 
 ## Step 8 - Using Snyk VS Code IDE Plugin
 
-TODO://
+Optionally if you have time, and you have VS Code installed you can install a plugin to allow you to scan your "**goof**" code within VS code while in an IDE
+
+* Install it using the following link - [Install VS Code Snyk Plugin](https://marketplace.visualstudio.com/items?itemName=snyk-security.vscode-vuln-cost)
+
+![alt tag](https://i.ibb.co/zHZ3qxv/snyk-starter-open-source-12.png)
 
 
 
