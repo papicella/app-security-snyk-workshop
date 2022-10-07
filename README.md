@@ -28,7 +28,13 @@ _Note: It is assumed your using a mac for these steps, but it should also work o
 
 ## Step 1 - Fork our sample repo into your own GitHub account
 
-TODO://
+Navigate to the following GitHub repo - https://github.com/papicella/snyk-boot-web
+
+* Click on the "**Fork**" button
+* Ensure you are forking this repo to your public GitHub account
+* Click done
+
+![alt tag](https://i.ibb.co/JdvF8pP/app-sec-snyk-workshop-1.png)
 
 ## Step 2 - Configure GitHub Integration
 
