@@ -38,7 +38,29 @@ Navigate to the following GitHub repo - https://github.com/papicella/snyk-boot-w
 
 ## Step 2 - Configure GitHub Integration
 
-TODO://
+_NOTE: You may have already setup GitHub integration in that case go ahead and skip this step_
+
+* Login to http://app.snyk.io Sign up if you haven't already.
+* Navigating to Integrations -> Source Control -> GitHub
+* Fill in your Account Credentials to Connect your GitHub Account.
+
+![alt tag](https://i.ibb.co/bPqqybM/snyk-starter-open-source-1.png)
+
+Now that Snyk is connected to your GitHub Account, import the Repo into Snyk as a Project.
+
+* Navigate to Projects menu option
+* Click "**Add Project**" then select "**GitHub**"
+* Click on the Repo you forked.
+
+![alt tag](https://i.ibb.co/q9Rsxsh/snyk-starter-open-source-3.png)
+
+![alt tag](https://i.ibb.co/f9JsRQX/app-sec-snyk-workshop-2.png)
+
+_Note: The import can take up to one minute so you can view the import log while it's running _
+
+![alt tag](https://i.ibb.co/ZMZBNjR/app-sec-snyk-workshop-3.png)
+
+The scan should not take longer then a few minutes once complete more onto the nxt step below
 
 ## Step 3 - Analyze Snyk Open Source Scan Results
 
