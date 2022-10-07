@@ -76,7 +76,38 @@ TODO://
 
 ## Step 6 - Perform Snyk Test Using Snyk Open Source
 
-TODO://
+In addition to the Snyk App UI we also have, snyk - CLI and build-time tool to find & fix known vulnerabilities in open-source dependencies. The CLI is what is used in DevOps pipelines to introduce Application Security Scans as part of that workflow to push applications into production.
+
+* Before we get started please make sure you have setup the Snyk CLI. There are various install options as per the links below. Using the prebuilt binaries means you don't have to install NPM to install the Snyk CLI.
+
+1. Install Page - https://support.snyk.io/hc/en-us/articles/360003812538-Install-the-Snyk-CLI
+1. Prebuilt Binaries - https://github.com/snyk/snyk/releases
+
+_Note: Make sure you have the following version installed or later_
+
+```bash
+$ snyk --version
+1.1025.0
+```
+* Authorize the snyk CLI with your account as follows
+
+```bash
+$ snyk auth
+
+Now redirecting you to our auth page, go ahead and log in,
+and once the auth is complete, return to this prompt and you'll
+be ready to start using snyk.
+
+If you can't wait use this url:
+https://app.snyk.io/login?token=....
+
+
+Your account has been authenticated. Snyk is now ready to be used.
+```
+
+_Note: If you are having trouble authenticating via a browser with the Snyk App you can setup authentication using the API token as shown below
+[Authenticate using your API token](https://support.snyk.io/hc/en-us/articles/360004008258-Authenticate-the-CLI-with-your-account#UUID-4f46843c-174d-f448-cadf-893cfd7dd858_section-idm4557419555668831541902780562)_
+
 
 ## Step 7 - Perform a Snyk Test Using Snyk Code
 
