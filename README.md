@@ -15,14 +15,14 @@ Snyk Code and Snyk Open Source together provide easy-to-use, fast and accurate S
 
 In this workshop we will use the Snyk Platform to monitor and perform application security scans across various different artifacts in the repository. This workshop will focus on Snyk Open Source and Snyk Code capability.
 
-* Step 1 - Fork our sample repo into your own GitHub account
-* Step 2 - Configure GitHub Integration
-* Step 3 - Analyze Snyk Open Source Scan Results
-* Step 4 - Analyze Snyk Code Scan Results 
-* Step 5 - Fix a Vulnerability Using Snyk's Pull Request feature
-* Step 6 - Perform Snyk Test Using Snyk Open Source
-* Step 7 - Perform a Snyk Test Using Snyk Code
-* Step 8 - Using Snyk VS Code IDE Plugin
+* [Step 1 - Fork our sample repo into your own GitHub account](#step-1---fork-our-sample-repo-into-your-own-github-account)
+* [Step 2 - Configure GitHub Integration](#step-2---configure-github-integration)
+* [Step 3 - Analyze Snyk Open Source Scan Results](#step-3---analyze-snyk-open-source-scan-results)
+* [Step 4 - Analyze Snyk Code Scan Results](#step-4---analyze-snyk-code-scan-results) 
+* [Step 5 - Fix a Vulnerability Using Snyk's Pull Request feature](#step-5---fix-a-vulnerability-using-snyks-pull-request-feature)
+* [Step 6 - Perform Snyk Test Using Snyk Open Source](#step-6---perform-snyk-test-using-snyk-open-source)
+* [Step 7 - Perform a Snyk Test Using Snyk Code](#step-7---perform-a-snyk-test-using-snyk-code)
+* [Step 8 - Using Snyk VS Code IDE Plugin](#step-8---using-snyk-vs-code-ide-plugin)
 
 # Workshop Steps
 
