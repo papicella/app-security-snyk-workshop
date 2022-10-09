@@ -88,7 +88,36 @@ For each Vulnerability, Snyk displays the following ordered by our [Proprietary 
 
 ## Step 4 - Analyze Snyk Code Scan Results
 
-TODO://
+* Now let's return to the projects view page
+* Click on "**Code Analysis**" to view our SAST scan results
+
+![alt tag](https://i.ibb.co/pnw8JN2/app-sec-snyk-workshop-8.png)
+
+For each Vulnerability, Snyk displays the following:
+
+1. Each Vulnerability grouped by severity
+2. Each Vulnerability links to the CWE category code
+3. Each Vulnerability shows the CWE category name
+4. Displays the line of code where the security issue exists
+5. Description for the issue and the code file name it exists in
+6. A link to a Snyk Learn module on how to fix these type of vulnerabilities if available
+7. The ability to ignore issues you wish to remove from the list
+
+![alt tag](https://i.ibb.co/xCjvm7g/app-sec-snyk-workshop-9.png)
+
+There is only a single SQL Injection vulnerability in our code for this repo. * Click on the "**Full Details**" button to reveal full details as shown below.
+
+![alt tag](https://i.ibb.co/FVxJ48Z/app-sec-snyk-workshop-10.png)
+
+Snyk products all provide a developer-friendly experience, so Snyk Code helps developers to quickly understand the problem, learn the background, and how to approach it. Snyk Code helps you understand the dangerous code flow step-by-step. For every issue, Code also provides a link to the lines in the relevant files, to view more details on the problem like the CWE, and how to approach it.
+
+* Click on "**Fix Analysis**" to see how you can fix the issue based on other open source projects. On this page you get not just source code example fixes but also the following detailed information
+
+1. Details
+2. Types Of Attacks and/or Best practices for prevention
+3. Affected Environments if applicable
+
+![alt tag](https://i.ibb.co/1KSFGyL/app-sec-snyk-workshop-11.png)
 
 ## Step 5 - Fix a Vulnerability Using Snyk's Pull Request feature
 
