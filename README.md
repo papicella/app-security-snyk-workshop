@@ -339,7 +339,7 @@ Optionally if you have time, and you have VS Code installed you can install a pl
 
 Thanks for attending and completing this workshop
 
-![alt tag](https://i.ibb.co/7tnp1B6/snyk-logo.png)
+![alt tag](https://i.ibb.co/qJFDfWP/snyk-thumb.jpg)
 
 <hr />
 Pas Apicella [pas at snyk.io] is a Principal Solution Engineer APJ at Snyk
