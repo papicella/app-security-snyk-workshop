@@ -322,7 +322,7 @@ Summary:
 * Finally, lets run a scan and output the results to HTML
 
 ```bash
-$ snyk test --json | snyk-to-html -o results.html
+$ snyk code test --json | snyk-to-html -o results.html
 Vulnerability snapshot saved at results.html
 $ open -a "Google Chrome" results.html
 ```
