@@ -66,7 +66,25 @@ The scan should not take longer then a few minutes once complete more onto the n
 
 ## Step 3 - Analyze Snyk Open Source Scan Results
 
-TODO://
+Now we have imported our **snyk-boot-web** repo into Snyk let's take a look at the scan results for our maven manifest pom.xml file where our open source dependencies are declared 
+
+* Click on the pom.xml as shown below
+
+![alt tag](https://i.ibb.co/KVdgMgd/app-sec-snyk-workshop-6.png)
+
+Let's have a look at the vulnerabilities.
+
+For each Vulnerability, Snyk displays the following ordered by our [Proprietary Priority Score](https://docs.snyk.io/features/fixing-and-prioritizing-issues/starting-to-fix-vulnerabilities/snyk-priority-score) :
+1. The module that introduced it and, in the case of transitive dependencies, its direct dependency,
+2. Details on the path and proposed Remediation, as well as the specific vulnerable functions
+3. Overview
+4. Exploit maturity
+5. Links to CWE, CVE and CVSS Score
+6. A link to a Snyk Learn module on how to fix these type of vulnerabilities if available
+7. The ability to ignore issues you wish to remove from the list
+8. Plus more ...
+
+![alt tag](https://i.ibb.co/Y030hc4/app-sec-snyk-workshop-7.png)
 
 ## Step 4 - Analyze Snyk Code Scan Results
 
