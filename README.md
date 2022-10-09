@@ -121,7 +121,31 @@ Snyk products all provide a developer-friendly experience, so Snyk Code helps de
 
 ## Step 5 - Fix a Vulnerability Using Snyk's Pull Request feature
 
-TODO://
+When using the GitHub integration, and if a fix is available, Snyk can automatically upgrade the vulnerable dependency to a non-vulnerable version through a Pull Request.
+
+* Let's return to the project view page
+* Once again click on "**pom.xml**" to reveal it's vulnerabilities page, so we can fix one of our issues
+* In the search bar type in "**log4j**"
+* Click on "**Fix this vulnerability**" for "**log4j**" issue as shown below
+
+![alt tag](https://i.ibb.co/rwzGZgS/app-sec-snyk-workshop-12.png)
+
+* On the next screen, you'll be able to confirm the issue to fix with this PR. Click "**Open a Fix PR**" at the bottom of the page
+
+![alt tag](https://i.ibb.co/2kKqwwz/app-sec-snyk-workshop-13.png)
+
+* Once it's ready, you'll be taken to the PR in GitHub, where you can review the changes in the file diff view:
+
+![alt tag](https://i.ibb.co/q1MxC1S/app-sec-snyk-workshop-14.png)
+
+![alt tag](https://i.ibb.co/0KpzJRN/app-sec-snyk-workshop-16.png)
+
+* We see that PR checks completed successfully, assuring us we didn't introduce a breaking change
+
+![alt tag](https://i.ibb.co/z4v4KDx/app-sec-snyk-workshop-15.png)
+
+* Optionally now, go ahead and merge the PR!
+* Back in Snyk we can appreciate that our "**pom.xml**" file has 1 less Critical Severity Vulnerability if you did fix it
 
 ## Step 6 - Perform Snyk Test Using Snyk Open Source
 
