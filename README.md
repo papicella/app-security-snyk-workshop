@@ -265,12 +265,12 @@ Project path:      /Users/pasapicella/snyk/SE/workshops/NEW-WORKSHOPS/snyk-boot-
 Licenses:          enabled
 ```
 
-* We can instruct the Snyk App to actually monitor our code in the UI as shown below, so run "**snyk monitor**" to achieve that. 
+* We can instruct the Snyk App to actually monitor our code in the UI as shown below, so run "**snyk monitor**" to achieve that. Your Org name can be retrieved using the settings page on your Org in Snyk App.
 
-_Note: You may not need to set the paramater --org if you only have the one org in your account._ 
+_Note: You may not need to set the parameter **--org** if you only have the one org in your account._ 
 
 ```bash
-snyk monitor --org=workshops-admin-org
+$ snyk monitor --org=workshops-admin-org
 
 Monitoring /Users/pasapicella/snyk/SE/workshops/NEW-WORKSHOPS/snyk-boot-web (com.example:snyk-boot-web)...
 
@@ -283,12 +283,22 @@ Notifications about newly disclosed issues related to these dependencies will be
 
 ![alt tag](https://i.ibb.co/3r8WpKq/app-sec-snyk-workshop-4.png)
 
-## Step 7 - Perform a Snyk Test Using Snyk Code
-
-To perform a Snyk Code test using the SNYK CLI we simply run "snyk code test" from the same directory we are in based on the last step which is the root folder of our cloned repo
+* Finally, lets run a scan and output the results to HTML. You must have installed the [snyk-to-html](https://docs.snyk.io/products/snyk-code/cli-for-snyk-code/displaying-the-cli-results-in-an-html-format-using-the-snyk-to-html-feature/installing-the-snyk-to-html-tool) add on for this to work
 
 ```bash
-snyk code test
+$ snyk test --json | snyk-to-html -o results.html
+Vulnerability snapshot saved at results.html
+$ open -a "Google Chrome" results.html
+```
+
+![alt tag](https://i.ibb.co/LdyK6Zs/app-sec-snyk-workshop-17.png)
+
+## Step 7 - Perform a Snyk Test Using Snyk Code
+
+* To perform a Snyk Code test using the SNYK CLI we simply run "snyk code test" from the same directory we are in based on the last step which is the root folder of our cloned repo
+
+```bash
+$ snyk code test
 
 Testing /Users/pasapicella/snyk/SE/workshops/NEW-WORKSHOPS/snyk-boot-web ...
 
@@ -308,6 +318,16 @@ Summary:
   1 Code issues found
   1 [High]
 ```
+
+* Finally, lets run a scan and output the results to HTML
+
+```bash
+$ snyk test --json | snyk-to-html -o results.html
+Vulnerability snapshot saved at results.html
+$ open -a "Google Chrome" results.html
+```
+
+![alt tag](https://i.ibb.co/YdB7tPX/app-sec-snyk-workshop-18.png)
 
 ## Step 8 - Using Snyk VS Code IDE Plugin
 
