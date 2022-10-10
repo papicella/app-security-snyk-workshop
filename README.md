@@ -7,7 +7,6 @@ Snyk Code and Snyk Open Source together provide easy-to-use, fast and accurate S
 * public GitHub account - http://github.com
 * git CLI - https://git-scm.com/downloads
 * snyk CLI - https://support.snyk.io/hc/en-us/articles/360003812538-Install-the-Snyk-CLI
-* snyk-to-html tool - https://docs.snyk.io/products/snyk-code/cli-for-snyk-code/displaying-the-cli-results-in-an-html-format-using-the-snyk-to-html-feature/installing-the-snyk-to-html-tool
 * Registered account on Snyk App - http://app.snyk.io
 * Maven installed - https://maven.apache.org/download.cgi
 * install snyk-to-html tool - https://docs.snyk.io/products/snyk-code/cli-for-snyk-code/displaying-the-cli-results-in-an-html-format-using-the-snyk-to-html-feature/installing-the-snyk-to-html-tool
