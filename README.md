@@ -58,15 +58,15 @@ Now that Snyk is connected to your GitHub Account, import the Repo into Snyk as 
 
 ![alt tag](https://i.ibb.co/f9JsRQX/app-sec-snyk-workshop-2.png)
 
-_Note: The import can take up to one minute so you can view the import log while it's running _
+_Note: The import can take up to one minute so you can view the import log while it's running_
 
 ![alt tag](https://i.ibb.co/ZMZBNjR/app-sec-snyk-workshop-3.png)
 
-The scan should not take longer then a few minutes once complete more onto the nxt step below
+The scan should not take longer then a few minutes once complete more onto the next step below
 
 ## Step 3 - Analyze Snyk Open Source Scan Results
 
-Now we have imported our **snyk-boot-web** repo into Snyk let's take a look at the scan results for our maven manifest pom.xml file where our open source dependencies are declared 
+Now we have imported our **snyk-boot-web** repo into Snyk let's take a look at the scan results for our maven manifest pom.xml file where our open source dependencies are declared. 
 
 * Click on the pom.xml as shown below
 
@@ -89,7 +89,7 @@ For each Vulnerability, Snyk displays the following ordered by our [Proprietary 
 ## Step 4 - Analyze Snyk Code Scan Results
 
 * Now let's return to the projects view page
-* Click on "**Code Analysis**" to view our SAST scan results
+* Click on "**Code Analysis**" to view our SAST scan results as shown below
 
 ![alt tag](https://i.ibb.co/pnw8JN2/app-sec-snyk-workshop-8.png)
 
@@ -109,9 +109,9 @@ There is only a single SQL Injection vulnerability in our code for this repo. * 
 
 ![alt tag](https://i.ibb.co/FVxJ48Z/app-sec-snyk-workshop-10.png)
 
-Snyk products all provide a developer-friendly experience, so Snyk Code helps developers to quickly understand the problem, learn the background, and how to approach it. Snyk Code helps you understand the dangerous code flow step-by-step. For every issue, Code also provides a link to the lines in the relevant files, to view more details on the problem like the CWE, and how to approach it.
+All Snyk products provide a developer-friendly experience, so Snyk Code helps developers to quickly understand the problem, learn the background, and how to approach it. Snyk Code helps you understand the dangerous code flow step-by-step. For every issue, Code also provides a link to the lines in the relevant files, to view more details on the problem like the CWE, and how to approach it.
 
-* Click on "**Fix Analysis**" to see how you can fix the issue based on other open source projects. On this page you get not just source code example fixes but also the following detailed information
+* Click on "**Fix Analysis**" to see how you can fix the issue based on other open source projects. On this page you get not just source code example fixes but also the following detailed information.
 
 1. Details
 2. Types Of Attacks and/or Best practices for prevention
@@ -121,7 +121,7 @@ Snyk products all provide a developer-friendly experience, so Snyk Code helps de
 
 ## Step 5 - Fix a Vulnerability Using Snyk's Pull Request feature
 
-When using the GitHub integration, and if a fix is available, Snyk can automatically upgrade the vulnerable dependency to a non-vulnerable version through a Pull Request.
+When using our Source Code Management integration such as our GitHub integration, and if a fix is available, Snyk can automatically upgrade the vulnerable dependency to a non-vulnerable version through a Pull Request.
 
 * Let's return to the project view page
 * Once again click on "**pom.xml**" to reveal it's vulnerabilities page, so we can fix one of our issues
@@ -140,7 +140,7 @@ When using the GitHub integration, and if a fix is available, Snyk can automatic
 
 ![alt tag](https://i.ibb.co/0KpzJRN/app-sec-snyk-workshop-16.png)
 
-* We see that PR checks completed successfully, assuring us we didn't introduce a breaking change
+* We see that PR checks completed successfully, ensuring us we didn't introduce a breaking change
 
 ![alt tag](https://i.ibb.co/z4v4KDx/app-sec-snyk-workshop-15.png)
 
@@ -205,11 +205,12 @@ Receiving objects: 100% (145/145), 74.51 KiB | 2.76 MiB/s, done.
 Resolving deltas: 100% (60/60), done.
 ```
 
-* Change to the "snyk-boot-web" directory
+* Change to the "**snyk-boot-web**" directory
 
 ```bash
 $ cd snyk-boot-web
 ```
+* 
 * To have better control over your tests, you can pass the severity-threshold flag to the snyk test command with one of the supported options (low|medium|high|critical). With this flag, only vulnerabilities of provided level or higher will be reported. Let's set that to "**critical**" and run a test as shown below.
 
 ```bash
@@ -255,7 +256,6 @@ Issues with no direct upgrade or patch:
   This issue was fixed in versions: 1.31
 
 
-
 Organization:      pas.apicella-41p
 Package manager:   maven
 Target file:       pom.xml
@@ -265,7 +265,7 @@ Project path:      /Users/pasapicella/snyk/SE/workshops/NEW-WORKSHOPS/snyk-boot-
 Licenses:          enabled
 ```
 
-* We can instruct the Snyk App to actually monitor our code in the UI as shown below, so run "**snyk monitor**" to achieve that. Your Org name can be retrieved using the settings page on your Org in Snyk App.
+* We can instruct the Snyk App to actually monitor our "**pom.xml**" in the Snyk App UI as shown below, so run "**snyk monitor**" to achieve that. Your Org name can be retrieved using the settings page on your Org in Snyk App.
 
 _Note: You may not need to set the parameter **--org** if you only have the one org in your account._ 
 
@@ -295,7 +295,7 @@ $ open -a "Google Chrome" results.html
 
 ## Step 7 - Perform a Snyk Test Using Snyk Code
 
-* To perform a Snyk Code test using the SNYK CLI we simply run "snyk code test" from the same directory we are in based on the last step which is the root folder of our cloned repo
+* To perform a Snyk Code test using the SNYK CLI we simply run "**snyk code test**" from the same directory we are in based on the last step which is the root folder of our cloned repo
 
 ```bash
 $ snyk code test
@@ -319,7 +319,7 @@ Summary:
   1 [High]
 ```
 
-* Finally, lets run a scan and output the results to HTML
+* Finally, lets run a snyk code scan and output the results to HTML
 
 ```bash
 $ snyk code test --json | snyk-to-html -o results.html
@@ -331,11 +331,25 @@ $ open -a "Google Chrome" results.html
 
 ## Step 8 - Using Snyk VS Code IDE Plugin
 
-Optionally if you have time, and you have VS Code installed you can install a plugin to allow you to scan your "**snyk-boot-web**" code within VS code while in an IDE
+Optionally if you have time, and you have VS Code installed you can install a plugin to allow you to scan your "**snyk-boot-web**" code within VS code while in an IDE. Of course if you prefer to use IntelliJ IDEA then feel free to use that. 
 
 * Install it using the following link - [Install VS Code Snyk Plugin](https://marketplace.visualstudio.com/items?itemName=snyk-security.vscode-vuln-cost)
+* If using IntelliJ IDEA - [Install JetBrains Snyk Plugin](https://plugins.jetbrains.com/plugin/10972-snyk-security--code-open-source-container-iac-configurations)
+
+* _Note: Once installed ensure you authenticate with Snyk App prior to running your first IDE scan_
+
+Here are some links showing you how to do this
+
+1. IntelliJ IDEA - https://docs.snyk.io/ide-tools/jetbrains-plugins/authentication-for-the-jetbrains-plugins
+2. VS Code - https://docs.snyk.io/ide-tools/visual-studio-code-extension/visual-studio-code-extension-authentication
+
+_VS Code_
 
 ![alt tag](https://i.ibb.co/zmFGMMg/app-sec-snyk-workshop-5.png)
+
+_IntelliJ IDEA_
+
+![alt tag](https://i.ibb.co/ZY3Fr89/app-sec-snyk-workshop-20.png)
 
 Thanks for attending and completing this workshop
 
