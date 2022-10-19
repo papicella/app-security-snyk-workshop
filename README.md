@@ -62,6 +62,10 @@ _Note: The import can take up to one minute so you can view the import log while
 
 ![alt tag](https://i.ibb.co/ZMZBNjR/app-sec-snyk-workshop-3.png)
 
+* Finally, ensure you have enabled Snyk Code under the Settings menu option as shown below, before moving onto the next step
+
+![alt tag](https://i.ibb.co/2hpm4RF/app-sec-snyk-workshop-21.png)
+
 The scan should not take longer then a few minutes once complete more onto the next step below
 
 ## Step 3 - Analyze Snyk Open Source Scan Results
