@@ -38,6 +38,7 @@ Navigate to the following GitHub repo - https://github.com/papicella/snyk-boot-w
 
 ![alt tag](https://i.ibb.co/JdvF8pP/app-sec-snyk-workshop-1.png)
 
+
 ## Step 2 - Configure GitHub Integration
 
 _NOTE: You may have already setup GitHub integration in that case go ahead and skip this step_
